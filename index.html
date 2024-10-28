@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="product">
+        <button onclick="ascending()">Ascending</button>
+        <button onclick="descending()">Descending</button>
+        <script>
+            var numbers = [15, 16, 25, 37, 47, 65];
+            function myfunction(num) {
+                return num * 100;
+            }
+            var newarray = numbers.map(myfunction);
+            document.getElementById("product").innerHTML = "Mapped Values: " + newarray;
+            function ascending() {
+                newarray.sort(function (a, b) { return a - b });
+                document.getElementById("product").innerHTML = "Ascending Order: " + newarray;
+            }
+            function descending() {
+                newarray.sort(function (a, b) { return b - a });
+                document.getElementById("product").innerHTML = "Descending Order: " + newarray;
+            }
+        </script>
+</body>
+
+</html>
